@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p id="input1"></p>
+<p id="input2"></p>
+<p id="input3"></p>
+<p id="input4"></p>
+
+<script>
+function myFunction(char1, char2) {
+  var new_char1 = char1.split("");
+  var new_char2 = char2.split("");
+
+for(var n=0;n<new_char1.length;n++){
+  for(var i=0;i<new_char2.length;i++){
+    if(new_char1[n] == new_char1[n].toUpperCase() && new_char1[n].toLowerCase() == new_char2[i]){
+      return false;
+    }
+  }
+}
+return true;
+}
+
+document.getElementById("input1").innerHTML = "Input  -->  (ebCde, BCD)  &nbsp&nbsp&nbsp&nbsp Output --> " + myFunction("ebCde", "BCD");
+document.getElementById("input2").innerHTML = "Input  -->  (eCB, ECB)  &nbsp&nbsp&nbsp&nbsp Output --> " + myFunction("eCB", "ECB");
+document.getElementById("input3").innerHTML = "Input  -->  (BcdEF, BCEF)  &nbsp&nbsp&nbsp&nbsp Output --> " + myFunction("BcdEF", "BCEF");
+document.getElementById("input4").innerHTML = "Input  -->  (BCD, BcD)  &nbsp&nbsp&nbsp&nbsp Output --> " + myFunction("BCD", "BcD");
+
+</script>
+
+</body>
+</html>
